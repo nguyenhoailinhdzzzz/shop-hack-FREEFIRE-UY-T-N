@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>đăng nhập</title>
+</head>
+
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #wrappe {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+        }
+
+        form {
+            border: 1px solid #dadce0;
+            border-radius: 5px;
+            padding: 30px;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        input {
+            height: 50px;
+            width: 300px;
+            outline: none;
+            border: 1px solid #dadce0;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: inherit;
+            color: #202124;
+            transition: all 0.3s ease-in-out;
+        }
+
+        label {
+            position: absolute;
+            padding: 0px 5px;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #fff;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .form-group input:focus {
+            border: 2px solid #1a73e8;
+        }
+
+        .form-group input:focus+label,
+        .form-group input:valid+label {
+            top: 0px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #1a73e8;
+        }
+
+        input#btn-login {
+            background-color: #1a73e8;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input#btn-login:hover {
+            opacity: 0.85;
+        }
+    </style>
+    <div id="wrapper">
+        <form action="">
+            <h3>Đăng nhập</h3>
+            <div class="form-group">
+                <input type="text" name="email" required>
+                <label for="">email</label>
+            </div>
+            <div class="form-group">
+                <input type="text" name="mật khẩu" required>
+                <label for="">mật khẩu</label>
+            </div>
+            <input type="submit" value="đăng nhập" id="btn-login">
+            <a href="http://127.0.0.1:5500/register.html" title="login"> register</a>
+        </form>
+    </div>
+</body>
+</html>
